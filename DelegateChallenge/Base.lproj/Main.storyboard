@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DelegateChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,53 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type the Zip Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bYM-8o-zez">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JEc-1U-dSq">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="C3M-uN-Uhj">
+                                <connections>
+                                    <action selector="TogleValueSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="UDo-2E-Or0"/>
+                                </connections>
+                            </switch>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yCq-hO-ofp">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.41309099740932653" green="0.41309099740932653" blue="0.41309099740932653" alpha="0.74895466549295775" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yCq-hO-ofp" firstAttribute="top" secondItem="bYM-8o-zez" secondAttribute="bottom" constant="12" id="7oq-kd-llZ"/>
+                            <constraint firstItem="JEc-1U-dSq" firstAttribute="top" secondItem="yCq-hO-ofp" secondAttribute="bottom" constant="11" id="8s0-x7-XqI"/>
+                            <constraint firstItem="bYM-8o-zez" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A1Y-RF-o3z"/>
+                            <constraint firstItem="yCq-hO-ofp" firstAttribute="leading" secondItem="JEc-1U-dSq" secondAttribute="leading" id="DZX-xg-pTh"/>
+                            <constraint firstItem="bYM-8o-zez" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="EQk-Vi-6es"/>
+                            <constraint firstItem="C3M-uN-Uhj" firstAttribute="leading" secondItem="JEc-1U-dSq" secondAttribute="trailing" constant="9" id="KO6-3I-ZM1"/>
+                            <constraint firstItem="yCq-hO-ofp" firstAttribute="trailing" secondItem="C3M-uN-Uhj" secondAttribute="trailing" id="ORu-Ru-Rbm"/>
+                            <constraint firstItem="bYM-8o-zez" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="29" id="OxO-ZW-J2Z"/>
+                            <constraint firstItem="bYM-8o-zez" firstAttribute="leading" secondItem="yCq-hO-ofp" secondAttribute="leading" id="lWp-dz-qsV"/>
+                            <constraint firstItem="JEc-1U-dSq" firstAttribute="top" secondItem="C3M-uN-Uhj" secondAttribute="top" id="umK-Wn-cnN"/>
+                            <constraint firstItem="bYM-8o-zez" firstAttribute="trailing" secondItem="yCq-hO-ofp" secondAttribute="trailing" id="vqR-G2-Lnp"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dolarsTextView" destination="yCq-hO-ofp" id="Eku-9B-TUv"/>
+                        <outlet property="lockedTextView" destination="JEc-1U-dSq" id="ze2-RU-cPa"/>
+                        <outlet property="onLockSwich" destination="C3M-uN-Uhj" id="dSy-G7-rvg"/>
+                        <outlet property="zipCodeTextView" destination="bYM-8o-zez" id="qKB-a6-5B8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
